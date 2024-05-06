@@ -1,0 +1,209 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "madine one",sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+}
+.menu-icono{
+    width: 25px;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+header {
+    display: flex;
+    background-color: rgba(34,33,31,0.85);
+    align-items: center;
+    justify-content: space-between;
+}
+header a i{
+    color: white;
+    font-size: 3em;
+    padding: 0.5em;
+}
+header nav ul {
+    display: flex;
+    gap: 1.1em;
+}
+header nav {
+    color: white;
+}
+div,
+main{
+    display: block;
+}
+.seccion-1{
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+.seccion-2{
+    width: 100%;
+}
+.seccion-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.tarjetas {
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tarjetas img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tarjetas h2 {
+    color: #333;
+}
+
+.tarjetas p {
+    color: #666;
+}
+.leer-mas {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: blue; /* Color del enlace */
+    text-decoration: underline; /* Subrayado del enlace */
+}
+
+.leer-mas:hover {
+    color: red; /* Color del enlace al pasar el cursor */
+}
+footer{
+    background-color: #22211f;
+    width: 100%;
+    padding: 1em;}
+h3{
+    color: white;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+
+}
+.fixed-heart {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(255,0,255);
+}
+/*parte de media quries*/
+.mobile-header {
+    display: none; /* Oculta el texto "Página Web" en dispositivos mayores a 768px */
+}
+
+.container {
+    position: relative;
+}
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+    header {
+        display: block;
+    }
+
+    nav {
+        display: none; /* Oculta la barra de navegación en dispositivos menores o iguales a 768px */
+    }
+
+    .mobile-header {
+        display: block; /* Muestra el texto "Página Web" */
+        background-color: #ff0000; /* Cambia el color de fondo del texto "Página Web" */
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .seccion-1 {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: center;
+    }
+
+    .acerca-imagen {
+        margin-top: 20px; /* Añade espacio entre el texto y la imagen */
+    }
+
+    .seccion-2 img {
+        width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    }
+}
+.menu-toggle {
+    display: none; /* Oculta el botón en pantallas grandes */
+    cursor: pointer;
+}
+
+/* Estilo para el menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Muestra el botón en dispositivos móviles */
+        color: white; /* Color del icono de hamburguesa */
+        font-size: 24px;
+        margin-left: 15px; /* Espacio entre el botón y el borde izquierdo */
+    }
+
+    header nav {
+        display: none; /* Oculta la barra de navegación por defecto */
+    }
+
+    header nav.active {
+        display: block; /* Muestra el menú desplegable */
+        background-color: rgba(34, 33, 31, 0.85); /* Color de fondo del menú */
+        position: absolute;
+        top: 60px; /* Ajusta la posición del menú desplegable */
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    header nav ul {
+        flex-direction: column; /* Cambia la dirección de la lista a vertical */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    header nav ul li {
+        margin-bottom: 10px; /* Espacio entre cada elemento del menú */
+    }
+}
+/* espacio de generar frase automatica */
+#btn-generar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto; /* Centramos el botón horizontalmente */
+    display: block; /* Convertimos el botón en un elemento de bloque */
+}
+
+#btn-generar:hover {
+    background-color: #0056b3;
+}
+
+#footer {
+    text-align: center;
+    margin-top: 20px; /* Añadimos un margen superior para separar la frase del botón */
+}
+
+#frase {
+    font-size: 18px;
+    font-style: italic;
+    color: white; /* Color del texto de la frase */
+}
